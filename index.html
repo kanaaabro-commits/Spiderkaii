@@ -1,1 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Spiderman ❤️</title>
 
+<style>
+*{box-sizing:border-box; font-family:'Segoe UI', sans-serif; margin:0; padding:0;}
+body{background:#8b0000; overflow-x:hidden; position:relative;}
+
+/* ===== JARING LABA-LABA ===== */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:url('web_silk.png');
+  opacity:0.07;
+  z-index:0;
+  pointer-events:none;
+}
+
+/* ===== COVER ===== */
+#cover{
+  position:fixed; inset:0;
+  background:linear-gradient(#7a0000,#a00000);
+  display:flex; align-items:center; justify-content:center;
+  z-index:10; transition:transform 1.2s ease, opacity 1.2s ease;
+}
+#cover.open{transform:translateY(-100%); opacity:0;}
+#heart{width:160px; cursor:pointer; animation:pulse 1.5s infinite;}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
+
+/* ===== BALLOON ===== */
+.balloon{position:fixed; bottom:-60px; animation:floatRotate linear forwards;}
+@keyframes floatRotate{
+  0% {transform: translateY(0) rotate(0deg);}
+  50% {transform: translateY(-50vh) rotate(10deg);}
+  100% {transform: translateY(-120vh) rotate(-10deg); opacity:0;}
+}
+
+/* ===== SECTION & PAPER ===== */
+section{padding:50px 20px;}
+.paper{
+  background:#fff8ec; padding:30px; border-radius:14px;
+  line-height:1.9; color:#333; box-shadow:0 12px 30px rgba(0,0,0,.25);
+  position:relative;
+  background-image:radial-gradient(rgba(0,0,0,.04) 1px, transparent 1px);
+  background-size:6px 6px;
+}
+
+/* ===== STICKER ===== */
+.sticker{position:absolute; width:90px; transition: all 0.3s ease;}
+.sticker.left{left:-25px; top:-11px;}
+.sticker.right{right:-9px; bottom:30px;}
+
+/* ===== CENTER TEXT ===== */
+.center-text{text-align:center; color:#ffecec; font-size:18px; padding:70px 20px; font-style:italic;}
+
+/* ===== GALLERY POLAROID ===== */
+.gallery{display:flex; flex-direction:column; gap:35px; align-items:center;}
+.polaroid{
+  background:white; padding:10px 10px 25px; width:240px;
+  transform:rotate(-2deg); box-shadow:0 8px 20px rgba(0,0,0,.3);
+  position:relative;
+}
+.polaroid:nth-child(2){transform:rotate(3deg);}
+.polaroid img.main{width:100%; border-radius:6px; transition:transform 0.3s;}
+.polaroid:hover img.main{transform:scale(1.05);}
+.polaroid img.spider{position:absolute; width:60px; bottom:-15px; right:-15px; z-index:5; transition:all 0.3s ease;}
+.bubble{
+  position:absolute; padding:12px 18px; background: rgba(255,255,255,0.95);
+  border-radius: 25px 25px 25px 5px; box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  font-size:14px; color:#333; max-width:150px; line-height:1.4;
+  opacity:0; transform:scale(0.8);
+  transition:opacity 0.8s ease, transform 0.8s ease;
+}
+.polaroid:hover .bubble{opacity:1; transform:scale(1);}
+
+/* ===== BIRTHDAY ===== */
+.birthday{text-align:center; padding:90px 20px 70px; color:#fff;}
+.birthday img{width:350px; margin-bottom:-30px;}
+.birthday h1{font-family:'Brush Script MT', cursive; font-size:44px; margin:10px 0;}
+.birthday p{font-size:16px; opacity:.95;}
+
+/* ===== FOOTER ===== */
+footer{text-align:center; color:#ffdede; padding:40px 20px 70px; font-size:14px;}
+</style>
+</head>
+
+<body>
+
+<!-- ===== COVER ===== -->
+<div id="cover">
+  <img id="heart" src="akukamu.png" alt="Spiderman Heart">
+</div>
+
+<!-- ===== SURAT PANJANG ===== -->
+<section>
+  <div class="paper">
+    <img src="spider2.png" class="sticker left">
+    <img src="spider1.png" class="sticker right">
+    <p><b>hi sayang,</b></p>
+    <p>
+      tau ngga, aku bikin ini sambil deg degan takutnya ngga sesuai ekspetasi, huhuhu  
+      sambil mikirin kamu dan semua hal kecil tentang kamu  
+      yang mungkin ga kamu sadari, tapi selalu aku inget.
+    </p>
+    <p>
+      you don’t have to be perfect.  
+      you just have to be you.
+    </p>
+    <p>
+      dan itu aja udah cukup buat aku.
+    </p>
+  </div>
+</section>
+
+<!-- ===== TRANSISI ===== -->
+<div class="center-text">
+  scroll pelan ya, sayang…  
+  there’s something i want you to see 🤍
+</div>
+
+<!-- ===== FOTO POLAROID ===== -->
+<section class="gallery">
+  <!-- POLAROID 1 -->
+  <div class="polaroid">
+    <img src="kai.jpg" class="main">
+    <div class="bubble" style="top:70px; left:-35px;">hi peterkuu! 🕷❤️</div>
+    <img src="spider3.png" class="spider">
+  </div>
+  <!-- POLAROID 2 -->
+  <div class="polaroid">
+    <img src="us.jpg" class="main">
+    <div class="bubble" style="top:30px; left:100px; background: linear-gradient(135deg, #ffefba, #ffffff); border-radius:25px 25px 25px 10px;">
+      sama aku terus ya sayangg?
+    </div>
+    <img src="spider4.png" class="spider">
+  </div>
+  <!-- POLAROID 3 -->
+  <div class="polaroid">
+    <img src="kai2.jpg" class="main">
+    <div class="bubble" style="top:70px; left:-35px; border-radius:50% 20% 50% 20%; background: rgba(255, 240, 220, 0.95);">
+      my favorite Spiderman! 🕷️❤️
+    </div>
+    <img src="spider5.png" class="spider">
+  </div>
+</section>
+
+<!-- ===== QUOTES / KATA-KATA ===== -->
+<section>
+  <div class="paper">
+    <p>
+      sayang, terimakasi banyak yaa uda mau bertahan sampe sejauh ini sama aku, maaf karna selalu nahan kamu buat ga pergi, maaf tentang kurangnya aku yaa, terimakasi karna udaa sayang sama aku sampe sekarang, jangan cape sama aku yaa? kan uda janji mau lewatin sama sama.. btw selamat ulang tahun sayangkuuu, selalu jadi anak baik buat semua orang ya sayangg, semoga semua yang belum tercapai tahun kemarin bisa kamu dapetin di tahun inii, semoga tahun ini banyak ngasi kamu kebahagiaan yaa sayangg, kalo masalah yang dateng tenang ajaa nanti aku usir jauh jauh!! happy teruss yaa, aku mau liat kamu senyum tiap harinyaa, ilysm maman jelekkk.
+      wherever life takes you,  
+      i hope you never forget  
+      that you are deeply loved.
+    </p>
+  </div>
+</section>
+
+<!-- ===== MINI STORY / DIARY ===== -->
+<section>
+  <div class="paper">
+    <p>
+      once upon a time in our little Spiderman world…  
+      we laughed, we teased, we made memories that never fade 🕸❤️
+    </p>
+  </div>
+</section>
+
+<!-- ===== MEMORY MAP / TIMELINE ===== -->
+<section class="gallery">
+  <div class="polaroid"><img src="memori1.png" class="main"><img src="gwen.png" class="spider"></div>
+  <div class="polaroid"><img src="memori2.jpg" class="main"><img src="spider6.png" class="spider"></div>
+  <div class="polaroid"><img src="memori3.jpg" class="main"><img src="spiderlove.png" class="spider"></div>
+</section>
+
+<!-- ===== FUN FACTS ABOUT KAI ===== -->
+<section>
+  <div class="paper">
+    <p>
+      - Kai suka Spiderman 🕷️
+    </p>
+    <p>
+      - Kai cina ngaku jakarta, hi koko
+    </p>
+    <p>
+      - Kai idola mobail lejen aku ❤️
+    </p>
+    <p>
+      - Kai + aku = peter and gwen 🕸️
+    </p>
+  </div>
+</section>
+
+<!-- ===== BIRTHDAY SURPRISE ===== -->
+<section class="birthday">
+  <img src="spidercake.png" alt="Spiderman Cake">
+  <h1>Happy Birthday</h1>
+  <p>my favorite Spiderman 🕷️❤️</p>
+  <p><i>wish you all the best, always.</i></p>
+</section>
+
+<!-- ===== CLOSING ===== -->
+<section>
+  <div class="paper">
+    <p>
+      ilymost ma hubby, kamu selalu menjadi Peterku🕷️❤️  
+    </p>
+    <p>
+      made with love for Maman Jelekk🤍
+    </p>
+  </div>
+</section>
+
+<footer>
+  🕷️🤍
+</footer>
+
+<script>
+const heart = document.getElementById("heart");
+const cover = document.getElementById("cover");
+
+heart.onclick = () => {
+  cover.classList.add("open");
+  let count = 0;
+  const interval = setInterval(() => {
+    if(count >= 8){ clearInterval(interval); return; }
+    const b = document.createElement("div");
+    b.className = "balloon";
+    b.innerText = "🎈";
+    b.style.left = Math.random()*80 + 10 + "vw";
+    b.style.fontSize = (20 + Math.random()*15) + "px";
+    b.style.animationDuration = (6 + Math.random()*3) + "s";
+    b.style.opacity = Math.random()*0.4 + 0.6;
+    b.style.transform = `rotate(${Math.random()*30-15}deg)`;
+    document.body.appendChild(b);
+    setTimeout(()=>b.remove(),9000);
+    count++;
+  },400);
+};
+</script>
+
+</body>
+</html>
